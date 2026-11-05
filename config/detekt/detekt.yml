@@ -1,0 +1,17 @@
+# Seuls les écarts à la configuration par défaut de detekt sont listés ici.
+naming:
+  FunctionNaming:
+    # Les fonctions @Composable s'écrivent en PascalCase.
+    ignoreAnnotated:
+      - Composable
+  TopLevelPropertyNaming:
+    # Les couleurs Compose suivent le même usage.
+    constantPattern: "[A-Z][A-Za-z0-9]*"
+
+style:
+  MagicNumber:
+    # Les thèmes sont des listes de valeurs, pas de la logique.
+    excludes:
+      - "**/ui/theme/**"
+      - "**/test/**"
+      - "**/androidTest/**"

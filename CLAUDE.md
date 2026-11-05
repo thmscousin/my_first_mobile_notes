@@ -8,7 +8,11 @@ App de notes Android (Kotlin, Compose, Material 3). L'objectif premier est péda
 - Gradle tourne côté Windows avec le JDK d'Android Studio : `$env:JAVA_HOME = "C:\Program Files\Android\Android Studio\jbr"`, puis `.\gradlew.bat <tâche>`.
 - `adb` : `$env:LOCALAPPDATA\Android\Sdk\platform-tools\adb.exe`.
 
+Vérifications à lancer avant une PR : `.\gradlew.bat ktlintCheck detekt lintDebug testDebugUnitTest assembleDebug`. `ktlintFormat` corrige le formatage. Si ktlint signale un fichier supprimé, c'est son cache incrémental : lancer `clean`.
+
 ## Identifiants
+
+- La variante debug s'installe sous `io.github.thmscsn.myfirstmobilenotes.debug`, séparée de la variante release.
 
 - `applicationId` et package : `io.github.thmscsn.myfirstmobilenotes`.
 - Compte et dépôt GitHub : `thmscousin/my_first_mobile_notes`. Ce n'est pas le même nom que le package, et c'est voulu (voir `docs/adr/0002`).
