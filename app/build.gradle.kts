@@ -1,6 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.detekt)
+    alias(libs.plugins.ktlint)
 }
 
 android {
@@ -20,6 +22,11 @@ android {
     }
 
     buildTypes {
+        debug {
+            // Un identifiant distinct : les essais n'écrasent jamais les vraies notes.
+            applicationIdSuffix = ".debug"
+            versionNameSuffix = "-debug"
+        }
         release {
             optimization {
                 enable = true
@@ -34,6 +41,12 @@ android {
     buildFeatures {
         compose = true
     }
+}
+
+detekt {
+    source.setFrom("src/main/java", "src/test/java", "src/androidTest/java")
+    config.setFrom(rootProject.file("config/detekt/detekt.yml"))
+    buildUponDefaultConfig = true
 }
 
 dependencies {
