@@ -1,5 +1,7 @@
 # my_first_mobile_notes
 
+[![CI](https://github.com/thmscousin/my_first_mobile_notes/actions/workflows/ci.yml/badge.svg)](https://github.com/thmscousin/my_first_mobile_notes/actions/workflows/ci.yml)
+
 Application Android de notes, conçue pour un seul utilisateur sur un seul téléphone. Son but premier est d'apprendre l'écosystème Android : développement, tests, CI/CD et publication.
 
 Le projet en est à ses débuts : l'app n'affiche encore qu'un écran d'exemple.
