@@ -1,0 +1,18 @@
+*.iml
+.gradle
+.kotlin
+local.properties
+.DS_Store
+build
+/captures
+.externalNativeBuild
+.cxx
+
+# Android Studio : seuls les réglages de style sont partagés.
+/.idea/*
+!/.idea/codeStyles
+
+# Clés de signature : ne jamais les versionner.
+*.jks
+*.keystore
+keystore.properties

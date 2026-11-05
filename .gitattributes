@@ -1,0 +1,13 @@
+# Normalise les fins de ligne dans le dépôt (LF), quel que soit l'OS.
+* text=auto
+
+# gradlew est exécuté sous Linux par la CI : un CRLF le casserait.
+gradlew text eol=lf
+
+# Les scripts Windows ont besoin de CRLF.
+*.bat text eol=crlf
+
+# Fichiers binaires
+*.jar binary
+*.webp binary
+*.png binary
