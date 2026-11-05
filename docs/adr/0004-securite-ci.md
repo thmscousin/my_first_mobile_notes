@@ -13,7 +13,7 @@ Le dépôt est public, et il produira plus tard des APK signés. Une action GitH
 - **Validation du wrapper Gradle** à chaque PR, car `gradle-wrapper.jar` est un binaire exécuté en CI et difficile à relire.
 - **Dependabot** propose chaque semaine les mises à jour de Gradle et des actions, SHA compris.
 - **CodeQL** analyse le code Kotlin à chaque PR et chaque semaine.
-- **Ruleset sur `main`** : PR et checks verts obligatoires, squash merge uniquement, sans contournement possible.
+- **Ruleset sur `main`** : PR et checks `build` et `analyze` verts obligatoires, squash merge uniquement, sans contournement possible. Une alerte CodeQL de sévérité élevée bloque aussi la fusion, car le job `analyze` reste vert même quand il trouve une faille.
 
 ## Conséquences
 
